@@ -17,14 +17,18 @@ public class HandlingMutipleWindows {
 		driver.findElement(By.xpath("//a[contains(text(),'Help')]")).click();
 		System.out.println("Befor use Switch method");
 		System.out.println(driver.getTitle());
-		System.out.println("After use Switch method");
+		
 		Set<String> ids=driver.getWindowHandles();
 		Iterator<String> it=ids.iterator();
 		String parentId=it.next();
 		String childId=it.next();
 		driver.switchTo().window(childId);
+		System.out.println("After use Switch method");
 		System.out.println("Child window name: "+driver.getTitle());
-
+		
+		driver.switchTo().window(parentId);
+		System.out.println("Switch back to parent");
+		System.out.println("PArent account: "+driver.getTitle());
 		
 		
 		
