@@ -48,3 +48,14 @@ Checkbox,
 click on a checkbox,
 //table[@class='ui celled sortable striped table custom-grid table-scroll']//tbody/tr[2]//input[@name='id'].click();
 
+#### How to handle dynamic IDs  
+You can use "Contains" ,"starts with()" and "ends-with" methods to find dynamic IDs. 
+
+Examples: 
+driver.findElement(By.xpath(//input[contains(@id,'test_')])).sendKeys(); 
+driver.findElement(By.xpath(//input[start-with(@id,'test_')])).sendKeys(); 
+driver.findElement(By.xpath(//input[ends-with(@id,'_test')])).sendKeys(); 
+
+#### Cutomized xpaths for links 
+//a[contains(text(),'Sign in')]
+
