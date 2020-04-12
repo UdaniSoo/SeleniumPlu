@@ -57,5 +57,10 @@ driver.findElement(By.xpath(//input[start-with(@id,'test_')])).sendKeys();
 driver.findElement(By.xpath(//input[ends-with(@id,'_test')])).sendKeys(); 
 
 #### Cutomized xpaths for links 
-//a[contains(text(),'Sign in')]
+//a[contains(text(),'Sign in')] 
+ 
+### driver.findElements 
+
+you can use this when u need to count(tot) the numbers of elements present in a site. 
+
 
